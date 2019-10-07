@@ -86,9 +86,13 @@ To do addition, use your sum() function that you've already created. You're goin
 have to be resourceful to figure out how to do this. However, you may continue 
 to use the + operator for string concatenation.
 */
-
+//sumArr = [2,3,4]
 export function sumArrayWithThreeNumbers(sumArr) {
-
+    const sum1 = sum(sumArr[0], sumArr[1])[0];
+    const sumTotal = sum(sum1, sumArr[2])[0];
+    const string = `The numbers ${sumArr[0]},${sumArr[1]},${sumArr[2]} have a sum of ${sumTotal}.`;
+    const array = [sumTotal, string];
+    return array;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 

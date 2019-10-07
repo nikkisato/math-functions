@@ -31,7 +31,6 @@ EXACTLY follows this example and uses the values that were input into the functi
 
 export function multiply(a, b) {
     const multiply = a * b;
-
     const stringofMul = `The product of ${a} and ${b} is ${multiply}.`;
     const myMulArray = [multiply, stringofMul];
     return myMulArray;
@@ -59,7 +58,15 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+    const sumNumber = sum(a, b)[0];
+    const sumTotal = sum(sumNumber, c)[0];
+    const mulNumber = multiply(a, b)[0];  
+    const mulTotal = multiply (mulNumber, c)[0];
 
+    const third = `${a} and ${b} and ${c} sum to ${sumTotal}.`;
+    const fourth = `The product of ${a} and ${b} and ${c} is ${mulTotal}.`;
+    const array = [sumTotal, mulTotal, third, fourth];
+    return array;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 

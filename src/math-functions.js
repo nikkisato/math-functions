@@ -30,7 +30,11 @@ EXACTLY follows this example and uses the values that were input into the functi
 */
 
 export function multiply(a, b) {
+    const multiply = a * b;
 
+    const stringofMul = `The product of ${a} and ${b} is ${multiply}.`;
+    const myMulArray = [multiply, stringofMul];
+    return myMulArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
